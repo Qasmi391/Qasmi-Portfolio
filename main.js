@@ -9,3 +9,9 @@ window.onscroll = function(){
         header.classList.remove("active")
     }
 }
+
+let nav_links = document.getElementById("links");
+
+function Open_close_menu() {
+    nav_links.classList.toggle("active")
+}

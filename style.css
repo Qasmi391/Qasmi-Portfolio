@@ -18,12 +18,10 @@
 }
 
 body{
-    width: 80%;
-    margin: auto;
     background: #111111;
 }
 
-.conteaner{
+.container{
     width: 80%;
     margin: auto;
     max-width: 1500px;
@@ -182,14 +180,14 @@ header nav .icons a:hover{
 
 
 .hero .div_img {
-    width: 450px;
+    width: 50%;
     position: relative;
     border-radius: 0 0 600px 600px;
     overflow: hidden;
 }
 
 .hero .div_img .bg_img{
-    width: 450px;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -199,9 +197,6 @@ header nav .icons a:hover{
 
 /*----- about -----*/
 
-.about{
-
-}
 .about .container{
     background-color: var(--black_color);
     display: flex;
@@ -395,5 +390,246 @@ header nav .icons a:hover{
     scale: 1.1;
 }
 
+.close_menu{
+    display: none;
+}
+header .links .logo{
+    display: none;
+}
+.icon_menu{
+    display: none;
+}
+
 
 /*----Start Responsive----*/
+
+@media (max-width:1250px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media (max-width:1000px){
+    header nav .links{
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        width: 400px;
+        background-color: var(--black_color);
+        left: -400px;
+        padding: 50px 0;
+        height: 100%;
+        border-right: 1px solid var(--border_color);
+        text-align: center;
+        transition: 0.3s ease-in-out;
+    }
+    header nav .links.active{
+        left: 0;
+    }
+
+    .close_menu{
+        display: block;
+        font-size: 28px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    header .links .logo{
+        display: block;
+    }
+
+    .icon_menu{
+        display: block;
+        font-size: 28px;
+    }
+
+
+         /*---1000 ----*/
+
+    .hero .div_text h4{
+        font-size: 25px;
+    }
+    .hero .div_text h1{
+        font-size: 55px;
+    }
+    .hero .div_text h2 {
+        font-size: 55px;
+    }
+    .hero .div_text p {
+        font-size: 16px;
+
+    }
+    .hero .btn{
+        font-size: 18px;
+        padding: 16px 40px;
+    }
+    .hero .container{
+        flex-direction: column;
+    }
+    .hero .div_text{
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .hero .btns{
+        justify-content: center;
+    }
+    .hero{
+        height: auto ;
+    }
+
+    .about .container{
+        flex-direction: column;
+    }
+    .about .div_text{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .about .div_img{
+        width:  45%;
+    }
+
+    .services .boxs .box{
+        width: 47px;
+        margin-bottom: 30px;
+    }
+
+    .contact .container{
+        flex-direction: column;
+    }
+    .contact .social_contac{
+        width: 100% ;
+        margin-bottom: 40px;
+    }
+    .contact .social_contac .links{
+        flex-direction: row;
+         flex-wrap: wrap;
+    }
+    .contact .social_contac .links a{
+        width: 50%;
+    }
+    .contact .social_contac .links a{
+        font-size: 16px;
+    }
+    .contact .social_contac .links a i{
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .contact form{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .contact .btn{
+        font-size: 16px;
+        padding: 13px 28p x;
+    }
+
+    
+}
+@media (max-width:500px){
+
+    .btn{
+        padding: 12px 25px ;
+        font-size: 14px; 
+    }
+
+    .top_section h2{
+        font-size: 22px;
+    }
+
+    header nav .icons a{
+        font-size: 20px;
+    }
+    header nav .icons{
+        gap: 15px;
+        align-items: center;
+    }
+    header nav .logo img{
+        width: 150px;
+    }
+    header nav .links{
+        width: 100%;
+        left: -100%;
+    }
+    .icon_menu{
+        margin-left: 15px;
+    }
+       /*---mobile----*/
+
+    .hero .div_text h4{
+        font-size: 22px;
+    }
+    .hero .div_text h1{
+        font-size: 40px;
+    }
+    .hero .div_text h2 {
+        font-size: 40px;
+    }
+    .hero .div_text p {
+        font-size: 14px;
+        margin: 25px auto ;
+        width: 100%;
+    }
+    .hero .btn{
+        font-size: 16px;
+        padding: 14px 30px;
+    }
+    .hero .div_img{
+        width: 50%;
+    }
+
+    .about .div_text h2{
+        font-size: 30px;
+    }
+    .about .div_text h4{
+        font-size: 20px;
+    }
+    .about .div_text p{
+        font-size: 14px;
+    }
+    .about .div_text ul li{
+        width: 100%;
+        font-size: 14px;
+    }
+    .about .div_img{
+        width:  85%;
+    }
+
+    .services .boxs .box{
+        width: 100%;
+    }
+    .services .boxs .box i {
+        font-size: 55px;
+    }
+
+    .contact .social_contac .links{
+        flex-direction: column;
+    }
+    .contact .social_contac .links a{
+        width: 100%;
+    }
+
+    .services{
+        padding-bottom: 40px;
+    }
+    .contact{
+        padding-top: 0;
+    }
+    .contact .top_section{
+        margin-bottom: 60px;
+    }
+
+    .contact form{
+        width: 100%;
+    }
+    
+
+    
+    
+    
+
+}
